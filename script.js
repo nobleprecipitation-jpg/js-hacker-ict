@@ -28,66 +28,100 @@ window.addEventListener('resize', () => { canvas.width = window.innerWidth; canv
 // --- 2. GAME DATA (10 Levels) ---
 const levels = [
     {
-        title: "LEVEL 1: First Protocol",
-        lesson: "<p>Welcome to JavaScript. To hack this system, you must first learn how to communicate with it. We use a command called <code>console.log()</code> to print text directly to the system output.</p><p><strong>TASK:</strong> Print the exact phrase <strong>Hello World</strong> to the output. Fill in the blanks below:</p><pre><code>console.log(\"________\");</code></pre>",
+        title: "LEVEL 1: Terminal Communication",
+        lesson: `<h3>The 'Console' Command</h3>
+        <p>In JavaScript, <code>console</code> is an object that refers to your browser's debug terminal. The <code>.log()</code> method tells the computer to "print" or "output" whatever is inside the parentheses.</p>
+        <p><strong>RULE:</strong> Text (Strings) must always be wrapped in quotation marks <code>""</code>.</p>
+        <p><strong>TASK:</strong> Use the command to output <strong>Hello World</strong>.</p>
+        <pre><code>console.log("________");</code></pre>`,
         expectedOutput: "Hello World",
-        hint: "Type console.log(\"Hello World\"); Make sure your capitalization is exact!"
+        hint: "Type: console.log(\"Hello World\"); (Don't forget the semicolon at the end!)"
     },
     {
-        title: "LEVEL 2: Memory Storage (Variables)",
-        lesson: "<p>You need to store temporary data. We use 'variables' for this. By using the keyword <code>let</code>, you create a variable that can be changed or updated later.</p><p><strong>TASK:</strong> Create a variable named <code>alias</code>, assign it the value <strong>Hacker</strong>, and print it.</p><pre><code>let alias = \"________\";\nconsole.log(alias);</code></pre>",
+        title: "LEVEL 2: Creating Variables",
+        lesson: `<h3>What is a Variable?</h3>
+        <p>Think of a variable as a labeled box that holds information. We use <code>let</code> to "declare" (create) the box. Once created, we can change what's inside the box later.</p>
+        <p><strong>TASK:</strong> Create a variable named <code>alias</code> and store the name <strong>Hacker</strong> inside it.</p>
+        <pre><code>let alias = "________";\nconsole.log(alias);</code></pre>`,
         expectedOutput: "Hacker",
-        hint: "let alias = \"Hacker\"; \nconsole.log(alias);"
+        hint: "Type: let alias = \"Hacker\"; then console.log(alias);"
     },
     {
-        title: "LEVEL 3: Immutable Data (Constants)",
-        lesson: "<p>Sometimes data must be locked down and never changed. Use the <code>const</code> keyword for constant variables. The system will crash if you try to change a const.</p><p><strong>TASK:</strong> Create a <code>const</code> variable named <code>pin</code> and set it to the number <strong>1234</strong>. Print it.</p><pre><code>const pin = ____;\nconsole.log(pin);</code></pre>",
+        title: "LEVEL 3: Constants (The 'Vault')",
+        lesson: `<h3>Constants vs. Variables</h3>
+        <p>Sometimes data should never change (like your Birth Date or a System ID). We use <code>const</code> for these. If you try to change a <code>const</code> later, the program will crash!</p>
+        <p><strong>TASK:</strong> Create a constant named <code>pin</code> and set it to <strong>1234</strong>.</p>
+        <pre><code>const pin = ____;\nconsole.log(pin);</code></pre>`,
         expectedOutput: "1234",
-        hint: "const pin = 1234; \nconsole.log(pin); (Numbers don't need quotation marks!)"
+        hint: "Type: const pin = 1234; (Note: Numbers do NOT need quotation marks!)"
     },
     {
-        title: "LEVEL 4: Processing Logic (Math)",
-        lesson: "<p>JavaScript is a powerful calculator. Let's bypass a firewall by crunching its security code. You can use standard operators like <code>+</code> (add), <code>-</code> (subtract), <code>*</code> (multiply), and <code>/</code> (divide).</p><p><strong>TASK:</strong> Print the result of <strong>50 multiplied by 2</strong>.</p><pre><code>console.log(50 _ 2);</code></pre>",
+        title: "LEVEL 4: Arithmetic Operators",
+        lesson: `<h3>Math in Code</h3>
+        <p>Computers are just giant calculators. JavaScript uses <code>+</code>, <code>-</code>, <code>*</code> (multiply), and <code>/</code> (divide) to process numbers.</p>
+        <p><strong>TASK:</strong> Calculate 50 times 2 to bypass the gate.</p>
+        <pre><code>console.log(50 _ 2);</code></pre>`,
         expectedOutput: "100",
-        hint: "console.log(50 * 2);"
+        hint: "Use the asterisk (*) for multiplication: console.log(50 * 2);"
     },
     {
-        title: "LEVEL 5: Data Fusion (Concatenation)",
-        lesson: "<p>You can glue pieces of text (called Strings) together using the <code>+</code> symbol. This is known as concatenation.</p><p><strong>TASK:</strong> Create two strings, <strong>\"Access \"</strong> (notice the space!) and <strong>\"Granted\"</strong>. Add them together inside a console log.</p><pre><code>console.log(\"Access \" _ \"Granted\");</code></pre>",
+        title: "LEVEL 5: String Concatenation",
+        lesson: `<h3>Combining Text</h3>
+        <p>In ICT, "Concatenation" means gluing strings together. You use the <code>+</code> sign to join two pieces of text into one sentence.</p>
+        <p><strong>TASK:</strong> Join the words <strong>"Access "</strong> and <strong>"Granted"</strong>.</p>
+        <pre><code>console.log("Access " _ "Granted");</code></pre>`,
         expectedOutput: "Access Granted",
-        hint: "console.log(\"Access \" + \"Granted\");"
+        hint: "Type: console.log(\"Access \" + \"Granted\");"
     },
     {
-        title: "LEVEL 6: Decision Making (If Statements)",
-        lesson: "<p>An <code>if</code> statement gives your code a brain. It tells the computer to execute a block of code ONLY if a certain condition is true.</p><p><strong>TASK:</strong> Write a condition checking if <strong>10 is greater than 5</strong> using the <code>></code> symbol.</p><pre><code>if (10 _ 5) {\n  console.log(\"Bypassed\");\n}</code></pre>",
+        title: "LEVEL 6: Conditional Logic (IF)",
+        lesson: `<h3>Decision Making</h3>
+        <p>The <code>if</code> statement checks a "Boolean" (True or False). If the condition inside <code>( )</code> is true, the code inside <code>{ }</code> runs.</p>
+        
+        <p><strong>TASK:</strong> Check if 10 is greater than 5.</p>
+        <pre><code>if (10 _ 5) {\n  console.log("Bypassed");\n}</code></pre>`,
         expectedOutput: "Bypassed",
-        hint: "if (10 > 5) { console.log(\"Bypassed\"); }"
+        hint: "Use the greater-than sign: if (10 > 5) { ... }"
     },
     {
-        title: "LEVEL 7: Automation (For Loops)",
-        lesson: "<p>Hackers don't do repetitive work; they write loops. A <code>for</code> loop repeats code for a specific number of times.</p><p><strong>TASK:</strong> Complete the loop so it runs exactly 3 times. The counter <code>i</code> starts at 0.</p><pre><code>for(let i = 0; i < _; i++) {\n  console.log(\"Ping\");\n}</code></pre>",
+        title: "LEVEL 7: The For Loop",
+        lesson: `<h3>Repetitive Tasks</h3>
+        <p>Instead of typing 'Ping' three times, we use a loop. The loop has three parts: Start (<code>i=0</code>), Condition (<code>i < 3</code>), and Step (<code>i++</code>).</p>
+        <p><strong>TASK:</strong> Complete the loop to run 3 times.</p>
+        <pre><code>for(let i = 0; i < _; i++) {\n  console.log("Ping");\n}</code></pre>`,
         expectedOutput: "Ping\nPing\nPing",
-        hint: "for(let i = 0; i < 3; i++) { console.log(\"Ping\"); }"
+        hint: "The condition should be i < 3 to run it three times."
     },
     {
-        title: "LEVEL 8: Reusable Code (Functions)",
-        lesson: "<p>Functions are blocks of code you write once and can trigger (call) as many times as you want.</p><p><strong>TASK:</strong> The function <code>override</code> is already built, but you need to 'call' it to make it run.</p><pre><code>function override() {\n  console.log(\"System Overridden\");\n}\n\n________(); // Call it here</code></pre>",
+        title: "LEVEL 8: Defining Functions",
+        lesson: `<h3>Reusable Code</h3>
+        <p>A <code>function</code> is a saved recipe. You write the steps once, then "call" it by name whenever you need it.</p>
+        <p><strong>TASK:</strong> Call the function <code>override()</code> to execute the code inside.</p>
+        <pre><code>function override() {\n  console.log("System Overridden");\n}\n\n________();</code></pre>`,
         expectedOutput: "System Overridden",
-        hint: "Just type override(); at the bottom of the script."
+        hint: "To call a function, type its name followed by parentheses: override();"
     },
     {
-        title: "LEVEL 9: Data Lists (Arrays)",
-        lesson: "<p>Arrays hold multiple values in a single list. In programming, we start counting at 0. So the first item is at index 0, the second is at index 1, etc.</p>  <p><strong>TASK:</strong> Target the second port (443) by putting its correct index number in the brackets.</p><pre><code>let ports = [80, 443, 8080];\nconsole.log(ports[_]);</code></pre>",
+        title: "LEVEL 9: Array Indexing",
+        lesson: `<h3>Storing Lists</h3>
+        <p>An <strong>Array</strong> is a list of items. Important: JavaScript starts counting at <strong>0</strong>. <br>Index 0 = 1st item, Index 1 = 2nd item.</p>
+        
+        <p><strong>TASK:</strong> Get the 2nd item (443) from the ports array.</p>
+        <pre><code>let ports = [80, 443, 8080];\nconsole.log(ports[_]);</code></pre>`,
         expectedOutput: "443",
-        hint: "let ports = [80, 443, 8080]; \nconsole.log(ports[1]);"
+        hint: "Since we start at 0, the second item is at index 1: ports[1];"
     },
     {
-        title: "LEVEL 10: Complex Data (Objects)",
-        lesson: "<p>Objects store data in 'key-value' pairs. You access an object's specific data using a period, known as 'dot notation'.</p><p><strong>TASK:</strong> Print the target's IP address using dot notation.</p><pre><code>let target = { ip: \"192.168.1.1\" };\nconsole.log(target.__);</code></pre>",
+        title: "LEVEL 10: Objects (Final Boss)",
+        lesson: `<h3>Key-Value Pairs</h3>
+        <p>Objects store complex data. For example, a User has a Name, Age, and IP. We use "Dot Notation" (<code>object.property</code>) to get data out.</p>
+        <p><strong>TASK:</strong> Access the 'ip' property of the 'target' object.</p>
+        <pre><code>let target = { ip: "192.168.1.1" };\nconsole.log(target.__);</code></pre>`,
         expectedOutput: "192.168.1.1",
-        hint: "let target = { ip: \"192.168.1.1\" }; \nconsole.log(target.ip);"
+        hint: "Type: console.log(target.ip);"
     }
 ];
+
 
 // --- 3. GAME LOGIC ---
 let currentLevel = 0;
