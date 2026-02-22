@@ -17,7 +17,7 @@ body {
     height: 100vh;
 }
 
-/* CRT Scanline Effect */
+/* CRT hacker effects*/
 .crt-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -135,7 +135,7 @@ code { color: #fff; text-shadow: 0 0 3px rgba(255,255,255,0.5); font-size: 1.1em
 .success-msg { color: #fff; text-shadow: 0 0 8px #fff; font-weight: bold; margin-top: 20px; background: rgba(0, 255, 0, 0.2); padding: 10px;}
 .error-msg { color: var(--alert-red); text-shadow: 0 0 5px var(--alert-red);}
 
-/* Access Denied Flash Effect */
+/* Access Denied Flash Effect(WOMP WOMP) */
 .flash-red {
     animation: alert-flash 0.3s 2;
     border-color: var(--alert-red) !important;

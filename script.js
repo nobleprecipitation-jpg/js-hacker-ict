@@ -1,4 +1,4 @@
-// --- 1. MATRIX BACKGROUND EFFECT ---
+// 1. Matrix Background shit
 const canvas = document.getElementById('matrix-canvas');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
@@ -25,7 +25,7 @@ function drawMatrix() {
 setInterval(drawMatrix, 33);
 window.addEventListener('resize', () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; });
 
-// --- 2. GAME DATA (10 Levels) ---
+//Levels 1 to 10 (HEHEEHE to10)
 const levels = [
     {
         title: "LEVEL 1: Terminal Communication",
@@ -123,12 +123,11 @@ const levels = [
 ];
 
 
-// --- 3. GAME LOGIC ---
+// 3.Game Logic
 let currentLevel = 0;
 let failedAttempts = 0;
 let capturedOutput = [];
 
-// Intercept console.log
 const originalConsoleLog = console.log;
 console.log = function(...args) {
     const outputString = args.join(' ');
@@ -189,7 +188,7 @@ function runCode() {
 
         if (finalOutputString === levelData.expectedOutput) {
             outputDisplay.innerHTML += `<div class="success-msg">[+] PAYLOAD ACCEPTED. ACCESS GRANTED.<br>Moving to next protocol in 3 seconds...</div>`;
-            document.getElementById('run-btn').disabled = true; // Prevent spam clicking
+            document.getElementById('run-btn').disabled = true; // Prevent asshats from spam clicking
             
             setTimeout(() => {
                 currentLevel++;
@@ -212,7 +211,7 @@ function handleFailure(msg) {
     triggerAccessDenied();
     failedAttempts++;
 
-    // Reveal hint after exactly 4 failed attempts
+    // Reveal hint after exactly 4 failed attempts(mahinang nilalang)
     if (failedAttempts >= 4) {
         document.getElementById('hint-box').style.display = 'block';
     }
@@ -227,6 +226,6 @@ function gameComplete() {
 
 }
 
-// --- 4. EVENT LISTENERS ---
+// 4.Event listeners
 document.getElementById('start-btn').addEventListener('click', startGame);
 document.getElementById('run-btn').addEventListener('click', runCode);
