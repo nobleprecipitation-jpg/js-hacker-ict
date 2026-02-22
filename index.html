@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS.HACKER // ICT TRAINING PROTOCOL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="crt-overlay"></div>
+
+    <canvas id="matrix-canvas"></canvas>
+
+    <div class="overlay" id="menu-overlay">
+        <div id="main-menu" class="glitch-container">
+            <h1 class="glitch" data-text="JS.HACKER">JS.HACKER</h1>
+            <p>Welcome, Initiate. This terminal will test your aptitude for the ICT strand. You must complete 10 coding protocols using JavaScript to gain full system access.</p>
+            <p><strong>MISSION:</strong> Read the manual (Panel 1), inject the payload (Panel 2), and verify the system response (Panel 3).</p>
+            <button class="btn pulse" id="start-btn">[ INITIALIZE SYSTEM ]</button>
+        </div>
+    </div>
+
+    <div id="game-ui">
+        
+        <div id="header-bar">
+            <span>SYSTEM COMPROMISE PROGRESS:</span>
+            <div id="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+            <span id="level-indicator">LVL 1/10</span>
+        </div>
+
+        <div class="ui-container">
+            <div class="left-column">
+                <div class="panel" id="panel-1">
+                    <h2 id="level-title" class="typing-text">SYSTEM BOOTING...</h2>
+                    <div id="lesson-content">Loading data...</div>
+                    <div id="hint-box" class="hint-box">
+                        <strong>[!] INCOMING TRANSMISSION (HINT):</strong>
+                        <span id="hint-text"></span>
+                    </div>
+                </div>
+
+                <div class="panel" id="panel-2">
+                    <h2>>_ CODE INJECTION TERMINAL</h2>
+                    <textarea id="code-editor" placeholder="// Type your JavaScript payload here...&#10;// Awaiting input..."></textarea>
+                    <button class="btn execute-btn" id="run-btn">EXECUTE PAYLOAD</button>
+                </div>
+            </div>
+
+            <div class="panel" id="panel-3">
+                <h2>>_ SYSTEM OUTPUT LOG</h2>
+                <div id="output-display"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
