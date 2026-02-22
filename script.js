@@ -26,6 +26,17 @@ setInterval(drawMatrix, 33);
 window.addEventListener('resize', () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; });
 
 //Levels 1 to 10 (HEHEEHE to10)
+
+/*1 console.log("Hello World");
+2 let alias = "Hacker"; console.log(alias);
+3 const pin = 1234; console.log(pin);
+4 console.log(50 * 2);
+5 console.log("Access " + "Granted");
+6 if (10 > 5) { console.log("Bypassed"); }
+7 for(let i = 0; i < 3; i++) { console.log("Ping"); }
+8 function override() { console.log("System Overridden"); } override();
+9 let ports = [80, 443, 8080]; console.log(ports[1]);
+10 let target = { ip: "192.168.1.1" }; console.log(target.ip);*/
 const levels = [
     {
         title: "LEVEL 1: Terminal Communication",
