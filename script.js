@@ -186,11 +186,10 @@ function runCode() {
         const levelData = levels[currentLevel];
         const finalOutputString = capturedOutput.join('\n').trim();
 
-        // Easter egg: console.log('bomb') or console.log("bomb") on level 1 instantly completes game
+        // Easter egg: console.log('bomb') or console.log("bomb") on level 1 instantly completes game(KEKEKKEKEEKEKEKE)
         if (
             currentLevel === 0 &&
             (() => {
-                // Remove whitespace and semicolon for comparison
                 const code = userCode.replace(/\s+/g, '').replace(/;$/, '').toLowerCase();
                 return code === "console.log('bomb')" || code === 'console.log("bomb")';
             })()
@@ -250,7 +249,7 @@ function gameComplete() {
     const congrats      = document.getElementById('congrats-message');
     const matrixCanvas  = document.getElementById('matrix-canvas');
 
-    // Keep matrix visible underneath everything
+    // matrix effect in effect
     if (matrixCanvas) {
         matrixCanvas.style.zIndex   = '1';
         matrixCanvas.style.position = 'fixed';
@@ -957,7 +956,7 @@ function gameComplete() {
             { t:'[LOG]  Traces left behind .......... NONE  ✓',          d:4180, c:'#00ffff', spd:16 },
             { t:'─'.repeat(56),                                           d:4520, c:'#0a3a0a', spd:0  },
             { t:'[SYS]  CONGRATULATIONS, AGENT. YOU ARE A GHOST.',       d:4700, c:'#ffffff', spd:18, big:true, glitch:true },
-            { t:'[SYS]  The mainframe is ash. Mission accomplished. 💥', d:5380, c:'#00ff00', spd:18 },
+            { t:'[SYS]  The mainframe is ash. Mission accomplished.', d:5380, c:'#00ff00', spd:18 },
             { t:'[SYS]  Disconnect and vanish.',                          d:5950, c:'#0f0',    spd:22 },
         ];
 
