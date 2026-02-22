@@ -235,11 +235,9 @@ function handleFailure(msg) {
     }
 }
 
-// ============================================================
-// ULTIMATE gameComplete() — Drop-in replacement
-// Requires: #bomb-animation-overlay, #bomb-animation-container,
-//           #congrats-message, #matrix-canvas in your HTML.
-// ============================================================
+// gameComplete() — Drop-in replacement
+// #bomb-animation-overlay, #bomb-animation-container,
+// #congrats-message, #matrix-canvas in your HTML.
 
 function gameComplete() {
     document.getElementById('game-ui').style.display = 'none';
@@ -268,7 +266,7 @@ function gameComplete() {
     congrats.innerHTML = '';
     bombContainer.innerHTML = '';
 
-    // ── Inject styles ────────────────────────────────────────
+    // Injecting the styles 
     if (!document.getElementById('gc-styles')) {
         const s = document.createElement('style');
         s.id = 'gc-styles';
@@ -394,9 +392,7 @@ function gameComplete() {
         document.head.appendChild(s);
     }
 
-    // ─────────────────────────────────────────────────────────
     // PHASE 1: Render armed bomb
-    // ─────────────────────────────────────────────────────────
     bombContainer.style.cssText = `
         display:flex; flex-direction:column; align-items:center;
         position:relative; z-index:10000;
@@ -525,15 +521,13 @@ function gameComplete() {
         </div>
     `;
 
-    // ─────────────────────────────────────────────────────────
     // PHASE 2: Fuse burn + countdown
-    // ─────────────────────────────────────────────────────────
     const countEl  = document.getElementById('gc-countdown');
     const statusEl = document.getElementById('gc-status');
     const progBar  = document.getElementById('gc-progress-bar');
     const fuse     = document.getElementById('gc-fuse');
 
-    // Start fuse burn animation
+    //fuse burn animation
     fuse.classList.add('burning');
 
     // Animate progress bar over ~3.7s
@@ -573,7 +567,7 @@ function gameComplete() {
         requestAnimationFrame(doRumble);
     }
 
-    // Countdown: 3 → 2 → 1 → 💥
+    // Countdown:321 boom!
     const tickDurations = [900, 900, 900];
     let ci = 0;
 
@@ -612,9 +606,7 @@ function gameComplete() {
     }
     setTimeout(doTick, tickDurations[0]);
 
-    // ─────────────────────────────────────────────────────────
-    // PHASE 3: DETONATE
-    // ─────────────────────────────────────────────────────────
+    // PHASE 3: DETONATE(BOOM BOOM BAKUDAN!)
     function detonate() {
         bombContainer.innerHTML = '';
         bombContainer.style.cssText = 'position:fixed;inset:0;pointer-events:none;z-index:10000;';
@@ -627,7 +619,7 @@ function gameComplete() {
         overlay.style.background = 'rgba(0,0,0,0.7)';
         setTimeout(() => { overlay.style.background = 'rgba(0,0,0,0.4)'; }, 900);
 
-        // Green radial flash
+        // Green flash
         const flashG = document.createElement('div');
         flashG.style.cssText = `
             position:fixed;inset:0;z-index:10003;pointer-events:none;
@@ -638,7 +630,7 @@ function gameComplete() {
         document.body.appendChild(flashG);
         setTimeout(() => flashG.remove(), 1000);
 
-        // White core flash
+        // White flash
         const flashW = document.createElement('div');
         flashW.style.cssText = `
             position:fixed;inset:0;z-index:10004;pointer-events:none;
@@ -665,7 +657,7 @@ function gameComplete() {
             setTimeout(() => ring.remove(), 1600);
         });
 
-        // ── Explosion canvas ──────────────────────────────────
+        // ── BOOM BOOM canvas
         const expCanvas = document.createElement('canvas');
         expCanvas.width  = window.innerWidth;
         expCanvas.height = window.innerHeight;
@@ -682,7 +674,7 @@ function gameComplete() {
         const COL_FIRE   = ['#ff4400','#ff8800','#ffcc00','#ffffff','#ff2200'];
         const COL_CYAN   = ['#00ffff','#00cccc'];
 
-        // Build particle array
+        // Build particle array(particle effects)
         const P = [];
 
         // Main burst: outward particles
@@ -712,7 +704,7 @@ function gameComplete() {
             });
         }
 
-        // Matrix-style falling chars spawned from explosion
+        // Matrix style falling shit spawned from explosion
         for (let i = 0; i < 70; i++) {
             const spread = 450;
             P.push({
@@ -888,9 +880,7 @@ function gameComplete() {
         requestAnimationFrame(drawFrame);
     }
 
-    // ─────────────────────────────────────────────────────────
     // PHASE 4: Hacker terminal reveal
-    // ─────────────────────────────────────────────────────────
     function showTerminal() {
         overlay.style.background = 'rgba(0,0,0,0.52)';
 
@@ -991,7 +981,7 @@ function gameComplete() {
             }, d);
         });
 
-        // Blinking cursor after all lines
+        // Blinking cursor
         const lastDelay = lines[lines.length-1].d + lines[lines.length-1].t.length * 22 + 300;
         setTimeout(() => {
             const cur = document.createElement('div');
@@ -1000,7 +990,7 @@ function gameComplete() {
             terminal.appendChild(cur);
         }, lastDelay);
 
-        // Periodic random terminal glitch flicker
+        // Periodic random terminal glitch flicker type shi
         const glitchLoop = setInterval(() => {
             if (Math.random() > 0.8) {
                 terminal.style.filter = `brightness(${1.3 + Math.random()*0.4}) saturate(1.5)`;
