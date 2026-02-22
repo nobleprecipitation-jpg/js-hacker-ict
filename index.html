@@ -56,6 +56,15 @@
         </div>
     </div>
 
+    <!-- Bomb animation overlay (hidden by default) -->
+    <div id="bomb-animation-overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.95); z-index:9999; justify-content:center; align-items:center; flex-direction:column;">
+        <div id="bomb-animation-container">
+            <!-- Bomb SVG or CSS animation will be injected here by JS -->
+        </div>
+        <div id="congrats-message" style="display:none; color:#fff; font-size:2em; margin-top:30px; text-align:center; text-shadow:0 0 10px #fff;">
+            <!-- Message will be set by JS -->
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
