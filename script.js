@@ -35,7 +35,7 @@ const levels = [
         <p><strong>TASK:</strong> Use the command to output <strong>Hello World</strong>.</p>
         <pre><code>console.log("________");</code></pre>`,
         expectedOutput: "Hello World",
-        hint: "Type: console.log(\"Hello World\"); (Don't forget the semicolon at the end!)"
+        hint: "Type: console.log(\"Hello World\"); (Don't forget the semicolon at the end!)MAHINANG NILALANG!"
     },
     {
         title: "LEVEL 2: Creating Variables",
@@ -44,7 +44,7 @@ const levels = [
         <p><strong>TASK:</strong> Create a variable named <code>alias</code> and store the name <strong>Hacker</strong> inside it.</p>
         <pre><code>let alias = "________";\nconsole.log(alias);</code></pre>`,
         expectedOutput: "Hacker",
-        hint: "Type: let alias = \"Hacker\"; then console.log(alias);"
+        hint: "Type: let alias = \"Hacker\"; then console.log(alias);WEAK!"
     },
     {
         title: "LEVEL 3: Constants (The 'Vault')",
@@ -53,7 +53,7 @@ const levels = [
         <p><strong>TASK:</strong> Create a constant named <code>pin</code> and set it to <strong>1234</strong>.</p>
         <pre><code>const pin = ____;\nconsole.log(pin);</code></pre>`,
         expectedOutput: "1234",
-        hint: "Type: const pin = 1234; (Note: Numbers do NOT need quotation marks!)"
+        hint: "Type: const pin = 1234; (Note: Numbers do NOT need quotation marks!)THIS GUY STINKS!"
     },
     {
         title: "LEVEL 4: Arithmetic Operators",
@@ -62,7 +62,7 @@ const levels = [
         <p><strong>TASK:</strong> Calculate 50 times 2 to bypass the gate.</p>
         <pre><code>console.log(50 _ 2);</code></pre>`,
         expectedOutput: "100",
-        hint: "Use the asterisk (*) for multiplication: console.log(50 * 2);"
+        hint: "Use the asterisk (*) for multiplication: console.log(50 * 2);THIS IDIOT DOES NOT HAVE ANY COMPREHENSION"
     },
     {
         title: "LEVEL 5: String Concatenation",
@@ -71,7 +71,7 @@ const levels = [
         <p><strong>TASK:</strong> Join the words <strong>"Access "</strong> and <strong>"Granted"</strong>.</p>
         <pre><code>console.log("Access " _ "Granted");</code></pre>`,
         expectedOutput: "Access Granted",
-        hint: "Type: console.log(\"Access \" + \"Granted\");"
+        hint: "Type: console.log(\"Access \" + \"Granted\");SKILL ISSUE ALERT!"
     },
     {
         title: "LEVEL 6: Conditional Logic (IF)",
@@ -81,7 +81,7 @@ const levels = [
         <p><strong>TASK:</strong> Check if 10 is greater than 5.</p>
         <pre><code>if (10 _ 5) {\n  console.log("Bypassed");\n}</code></pre>`,
         expectedOutput: "Bypassed",
-        hint: "Use the greater-than sign: if (10 > 5) { ... }"
+        hint: "Use the greater-than sign: if (10 > 5) { ... }WOMP WOMP!"
     },
     {
         title: "LEVEL 7: The For Loop",
@@ -90,7 +90,7 @@ const levels = [
         <p><strong>TASK:</strong> Complete the loop to run 3 times.</p>
         <pre><code>for(let i = 0; i < _; i++) {\n  console.log("Ping");\n}</code></pre>`,
         expectedOutput: "Ping\nPing\nPing",
-        hint: "The condition should be i < 3 to run it three times."
+        hint: "The condition should be i < 3 to run it three times. BRAIN.exe has stopped working"
     },
     {
         title: "LEVEL 8: Defining Functions",
@@ -99,7 +99,7 @@ const levels = [
         <p><strong>TASK:</strong> Call the function <code>override()</code> to execute the code inside.</p>
         <pre><code>function override() {\n  console.log("System Overridden");\n}\n\n________();</code></pre>`,
         expectedOutput: "System Overridden",
-        hint: "To call a function, type its name followed by parentheses: override();"
+        hint: "To call a function, type its name followed by parentheses: override();YOUR BRAINCELLS ARE OFFLINE!"
     },
     {
         title: "LEVEL 9: Array Indexing",
@@ -109,7 +109,7 @@ const levels = [
         <p><strong>TASK:</strong> Get the 2nd item (443) from the ports array.</p>
         <pre><code>let ports = [80, 443, 8080];\nconsole.log(ports[_]);</code></pre>`,
         expectedOutput: "443",
-        hint: "Since we start at 0, the second item is at index 1: ports[1];"
+        hint: "Since we start at 0, the second item is at index 1: ports[1]; there are only 1 answer, and that is not it"
     },
     {
         title: "LEVEL 10: Objects (Final Boss)",
@@ -118,7 +118,7 @@ const levels = [
         <p><strong>TASK:</strong> Access the 'ip' property of the 'target' object.</p>
         <pre><code>let target = { ip: "192.168.1.1" };\nconsole.log(target.__);</code></pre>`,
         expectedOutput: "192.168.1.1",
-        hint: "Type: console.log(target.ip);"
+        hint: "Type: console.log(target.ip); two letters, and zero eyes"
     }
 ];
 
