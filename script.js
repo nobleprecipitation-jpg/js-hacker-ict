@@ -728,9 +728,9 @@ function gameComplete() {
         // Shockwave rings
         const rings = [
             { r:0, maxR:Math.hypot(CX, CY)*1.7, spd:45, col:'#00ff00', alpha:1.0,  lw:9 },
-            { r:0, maxR:Math.hypot(CX, CY)*1.4, spd:33, col:'#ffff00', alpha:0.75, lw:5 },
-            { r:0, maxR:Math.hypot(CX, CY)*1.1, spd:24, col:'#00ffff', alpha:0.55, lw:3 },
-            { r:0, maxR:Math.hypot(CX, CY)*0.9, spd:18, col:'#ffffff', alpha:0.4,  lw:2 },
+            { r:0, maxR:Math.hypot(CX, CY)*1.4, spd:33, col:'#ff0000', alpha:0.75, lw:5 },
+            { r:0, maxR:Math.hypot(CX, CY)*1.1, spd:24, col:'#00ff', alpha:0.55, lw:3 },
+            { r:0, maxR:Math.hypot(CX, CY)*0.9, spd:18, col:'#ff6', alpha:0.4,  lw:2 },
         ];
 
         // Fireball
@@ -937,17 +937,17 @@ function gameComplete() {
             { t:'[SYS]  IDS/IPS systems .............. NEUTRALIZED',     d:980,  c:'#ff4400', spd:18 },
             { t:'[SYS]  Backup grid .................. OFFLINE',         d:1360, c:'#ff4400', spd:18 },
             { t:'[SYS]  Evidence purged .............. CLEAN',           d:1720, c:'#ff4400', spd:18 },
-            { t:'─'.repeat(56),                                           d:2060, c:'#0a3a0a', spd:0  },
-            { t:'[ROOT] ██ ACCESS GRANTED — ELITE HACKER STATUS ██',     d:2220, c:'#00ff00', spd:16, big:true },
-            { t:'─'.repeat(56),                                           d:2900, c:'#0a3a0a', spd:0  },
-            { t:'[LOG]  Levels completed ........... 10 / 10  ✓',       d:3080, c:'#00ffff', spd:16 },
+            { t:'─'.repeat(56),                                          d:2060, c:'#0a3a0a', spd:0  },
+            { t:'[ROOT] ██ ACCESS GRANTED — ELITE HACKER STATUS ██',    d:2220, c:'#00ff00', spd:16, big:true },
+            { t:'─'.repeat(56),                                          d:2900, c:'#0a3a0a', spd:0  },
+            { t:'[LOG]  Levels completed ........... 10 / 10  ✓',        d:3080, c:'#00ffff', spd:16 },
             { t:'[LOG]  Vulnerabilities found ....... ALL  ✓',           d:3480, c:'#00ffff', spd:16 },
             { t:'[LOG]  Security bypassed ........... 100%  ✓',          d:3840, c:'#00ffff', spd:16 },
             { t:'[LOG]  Traces left behind .......... NONE  ✓',          d:4180, c:'#00ffff', spd:16 },
-            { t:'─'.repeat(56),                                           d:4520, c:'#0a3a0a', spd:0  },
+            { t:'─'.repeat(56),                                          d:4520, c:'#0a3a0a', spd:0  },
             { t:'[SYS]  CONGRATULATIONS, AGENT. YOU ARE A GHOST.',       d:4700, c:'#ffffff', spd:18, big:true, glitch:true },
-            { t:'[SYS]  The mainframe is ash. Mission accomplished.', d:5380, c:'#00ff00', spd:18 },
-            { t:'[SYS]  Disconnect and vanish.',                          d:5950, c:'#0f0',    spd:22 },
+            { t:'[SYS]  The mainframe is ash. Mission accomplished.',    d:5380, c:'#00ff00', spd:18 },
+            { t:'[SYS]  Disconnect and vanish.',                         d:5950, c:'#0f0',    spd:22 },
         ];
 
         function typeOut(el, text, speed, onDone) {
