@@ -733,12 +733,12 @@ function gameComplete() {
             { r:0, maxR:Math.hypot(CX, CY)*0.9, spd:18, col:'#ff6', alpha:0.4,  lw:2 },
         ];
 
-        // Fireball
+        // Fireball tententnetnente!!!
         let fireR     = 0;
         let fireAlpha = 1;
         const fireMax = Math.min(CX, CY) * 0.9;
 
-        // Smoke puffs
+        // Smoke puffs like Snoop DO double G!!
         const smokes = Array.from({ length: 16 }, () => {
             const a = Math.random() * Math.PI * 2;
             return {
