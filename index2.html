@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYSTEM ARCHITECTURE // COMPUTER SYSTEMS SIMULATOR</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <div class="crt-overlay"></div>
+
+    <canvas id="matrix-canvas"></canvas>
+
+    <div class="overlay" id="menu-overlay">
+        <div id="main-menu" class="glitch-container">
+            <h1 class="glitch" data-text="SYS.ARCH">SYS.ARCH</h1>
+            <p>Welcome, Systems Architect. This terminal will test your understanding of computer systems. You must complete 10 analysis protocols to verify the hardware and software workflow for each task.</p>
+            <p><strong>MISSION:</strong> Read the scenario (Panel 1), select the correct component (Panel 2), and verify the system execution log (Panel 3).</p>
+            <button class="btn pulse" id="start-btn">[ INITIALIZE SYSTEM ]</button>
+        </div>
+    </div>
+
+    <div id="game-ui">
+        
+        <div id="header-bar">
+            <span>SYSTEM ANALYSIS PROGRESS:</span>
+            <div id="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+            <span id="level-indicator">LVL 1/10</span>
+        </div>
+
+        <div class="ui-container">
+            <div class="left-column">
+                <div class="panel" id="panel-1">
+                    <h2 id="level-title" class="typing-text">SYSTEM BOOTING...</h2>
+                    <div id="lesson-content">Loading data...</div>
+                    <div id="hint-box" class="hint-box">
+                        <strong>[!] INCOMING TRANSMISSION (HINT):</strong>
+                        <span id="hint-text"></span>
+                    </div>
+                </div>
+
+                <div class="panel" id="panel-2">
+                    <h2>>_ SYSTEM COMMAND TERMINAL</h2>
+                    <textarea id="code-editor" placeholder="Type A, B, C, or D...&#10;Awaiting analysis..."></textarea>
+                    <button class="btn execute-btn" id="run-btn">EXECUTE ANALYSIS</button>
+                </div>
+            </div>
+
+            <div class="panel" id="panel-3">
+                <h2>>_ SYSTEM EXECUTION LOG</h2>
+                <div id="output-display"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bomb animation overlay (hidden by default) boom boom -->
+    <div id="bomb-animation-overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.95); z-index:9999; justify-content:center; align-items:center; flex-direction:column;">
+        <div id="bomb-animation-container">
+            <!-- Bomb SVG or CSS animation will be injected here by JS -->
+        </div>
+        <div id="congrats-message" style="display:none; color:#fff; font-size:2em; margin-top:30px; text-align:center; text-shadow:0 0 10px #fff;">
+            <!-- Message will be set by JS -->
+        </div>
+    </div>
+    <script src="script2.js"></script>
+</body>
+</html>
